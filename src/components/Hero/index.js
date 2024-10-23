@@ -16,6 +16,13 @@ const Hero = () => {
         document.body.removeChild(link);
     }
 
+    const scrollToProjects = () => {
+      const projectSection = document.getElementById('project');
+      if (projectSection) {
+          projectSection.scrollIntoView({ behavior: 'smooth' });
+      }
+  };
+
     return (
       <section className='bg-primary text-white min-h-screen w-full flex items-center justify-center'>
         <div className='container mx-auto grid md:grid-cols-2 items-center md:justify-between'>
@@ -42,7 +49,9 @@ const Hero = () => {
             {/* Contenedor para los botones */}
             <div className='flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-6'> {/* Ajusta el espacio entre los botones */}
               {/* Botón Ver Proyectos */}
-              <button className='btn bg-accent border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent flex items-center'>
+              <button 
+                onClick={scrollToProjects}
+                className='btn bg-accent border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent flex items-center'>
                 <FontAwesomeIcon icon={faEye} className='mr-2' />
                 Ver Proyectos
               </button>

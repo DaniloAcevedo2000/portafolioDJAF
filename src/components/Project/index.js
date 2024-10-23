@@ -35,7 +35,7 @@ const Project = () => {
             title: "Portafolio",
             description: "Este portafolio, desarrollado en React con Tailwind, presenta mis proyectos, habilidades y conocimientos en desarrollo web. A través de una interfaz moderna y responsiva, los visitantes pueden explorar mis trabajos anteriores y comprender mejor mi experiencia en el campo.",
             technologies: ["React", "Tailwind"],
-            link: "#",
+            link: "https://github.com/DaniloAcevedo2000/portafolio.git",
             image: "/Portafolio.png"
         }
     ];
@@ -76,9 +76,9 @@ const Project = () => {
     return (
         <section className='bg-primary text-white py-16'>
             <div className='container mx-auto px-6'>
-                <h2 className='text-4xl font-bold text-center mb-12 text-accent'>
+                <h1 className='text-2xl lg:text-6xl leading-loose font-bold'>
                     Proyectos Destacados
-                </h2>
+                </h1>
                 <Slider {...settings} className="project-slider"> {/* Añadir clase project-slider */}
                     {projects.map((project, index) => (
                         <div key={index} className='p-4'> {/* Añadir padding para crear el espaciado */}

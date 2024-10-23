@@ -47,7 +47,7 @@ const Skill = () => {
     return (
         <section className='bg-secondary text-white min-h-screen w-full py-16'>
             <div className='container mx-auto'>
-                <h1 className='text-4xl lg:text-6xl font-bold text-center mb-12 leading-loose'>Habilidades</h1>
+                <h1 className='text-2xl lg:text-6xl leading-loose font-bold'>Habilidades</h1>
 
                 <div className='flex flex-col lg:flex-row justify-center items-start gap-16'>
                     {/* Lenguajes */}
