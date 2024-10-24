@@ -1,21 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-
-/* Color */
+/* Colores */
 .bg-primary {
-    background-color: #0f172a;  
+    background-color: #0f172a;
 }
 
 .bg-secondary {
-    background-color: #1E293E;  
+    background-color: #1E293E;
 }
 
 .bg-accent {
-    background-color: #7477FF;  
+    background-color: #7477FF;
 }
 
 .text-accent {
@@ -24,144 +24,134 @@
 
 /* Navegación */
 nav li a {
-    @apply px-4 py-5 text-lg;
+    padding: 1.25rem 1rem;
+    font-size: 1.125rem;
+    color: white;
 }
 
 nav li a:hover {
-    color: #7477FF; /* Color al pasar el mouse */
+    color: #7477FF;
 }
 
 /* Navegación móvil */
 .mobile-nav {
-    @apply block md:hidden fixed top-10 py-2 w-full h-full bg-gray-900 duration-500;
+    display: block;
+    position: fixed;
+    top: 4rem;
+    left: -100%;
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: #1a202c;
+    transition: left 0.5s;
 }
 
-/* Estilos generales */
-h1 {
-    font-family: "Domine", serif;
-    line-height: 1.2 !important;
-}
-
-.animate-marquee {
-    display: inline-block;
-    animation: marquee 10s linear infinite;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Estilos del carrusel */
-.project-slider {
-    max-width: 100%; /* Evita el desbordamiento */
-    margin: auto; /* Centra el carrusel */
-}
-
-.project-slider .slick-slide {
-    transition: transform 0.3s ease; /* Transición suave al cambiar de imagen */
-}
-
-.project-slider .slick-slide img {
-    border-radius: 0.5rem; /* Bordes redondeados para las imágenes */
-}
-
-.project-slider .slick-dots {
-    bottom: 10px; /* Ajusta la posición de los puntos */
+.mobile-nav.show {
+    left: 0;
 }
 
 /* Efectos de proyecto */
 .project-card {
-    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+    transition: transform 0.3s ease;
+    background-color: #2a2a2a; /* Fondo secundario */
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    height: 400px;
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    transform: scale(1.05);
 }
 
+/* Carrusel */
+.project-slider {
+    max-width: 100%;
+    margin: auto;
+}
+
+.project-slider .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.project-slider .slick-slide img {
+    border-radius: 0.5rem;
+}
+
+.project-slider .slick-dots {
+    bottom: 10px;
+}
 
 /* Botón para regresar al inicio */
 .scroll-to-top {
     position: fixed;
-    bottom: 20px; /* Espacio desde el fondo de la página */
-    right: 20px;  /* Espacio desde el borde derecho */
-    color: white; /* Color de la flecha */
-    padding: 10px; /* Tamaño del botón */
+    bottom: 5%;
+    right: 5%;
+    color: white;
+    padding: 10px;
     border: none;
-    border-radius: 50%; /* Botón circular */
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 18px; /* Tamaño de la flecha */
+    font-size: 18px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 1000; /* Se asegura que quede por encima del contenido */
-  }
-  
-  .scroll-to-top:hover {
-    background-color: #5b5de6; /* Cambia de color al pasar el mouse */
-    transform: scale(1.1); /* Efecto de agrandado al pasar el mouse */
-  }
-  
-  /* TAMAÑO Y DISEÑO DE LAS TARJETAS */
-  .project-slider .slick-slide {
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #5b5de6;
+    transform: scale(1.1);
+}
+
+/* TAMAÑO Y DISEÑO DE LAS TARJETAS */
+.project-slider .slick-slide {
     display: flex;
     justify-content: center;
-  }
-  
-  .project-slider .slick-slide > div {
+}
+
+.project-slider .slick-slide > div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-  }
-  
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #2a2a2a; /* Color secundario */
-    border-radius: 8px;
-    overflow: hidden;
-    padding: 20px;
-    height: 400px; /* Establecemos una altura fija para todas las tarjetas */
-  }
-  
-  .project-card img {
+}
+
+/* Responsividad */
+.project-card img {
     width: 100%;
     height: 150px; /* Controlamos la altura de la imagen */
     object-fit: cover;
     border-radius: 8px;
-  }
-  
-  .project-card .card-content {
+}
+
+.project-card .card-content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  
-  .project-card h3 {
+}
+
+.project-card h3 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
-  }
-  
-  .project-card p {
+    font-size: 1.125rem;
+}
+
+.project-card p {
     color: #ccc;
     margin-bottom: 10px;
     font-size: 0.9rem;
-  }
-  
-  .project-card .technologies {
+}
+
+.project-card .technologies {
     font-size: 0.8rem;
     color: #bbb;
-  }
-  
-  .project-card a {
+}
+
+.project-card a {
     display: inline-block;
     background-color: #7477FF;
     color: white;
@@ -169,10 +159,125 @@ h1 {
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s ease;
-  }
-  
-  .project-card a:hover {
+}
+
+.project-card a:hover {
     background-color: #5b5de6;
-  }
-  
-  
+}
+
+/* Responsividad en el layout */
+.flex-col-responsive {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+/* Texto responsivo */
+.text-responsive {
+    font-size: 1.25rem;
+    @media (min-width: 768px) {
+        font-size: 1.5rem;
+    }
+    @media (min-width: 1024px) {
+        font-size: 2rem;
+    }
+}
+
+/* Padding y margin responsive */
+.padding-responsive {
+    padding: 1rem;
+    @media (min-width: 768px) {
+        padding: 1.5rem;
+    }
+    @media (min-width: 1024px) {
+        padding: 2rem;
+    }
+}
+
+
+/* Botón flotante */
+.floating-button-container {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+.floating-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+}
+
+/* Iconos flotantes visibles cuando se expande */
+.floating-icons {
+  margin-bottom: 10px; /* Aumenta el espacio entre los iconos y el botón */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floating-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px; /* Aumenta el espacio entre los iconos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.floating-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Colores específicos para cada ícono */
+.floating-icon.whatsapp {
+  color: #25D366;
+}
+
+.floating-icon.gmail {
+  color: #DB4437;
+}
+
+/* Botón de scroll-to-top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+}

@@ -1,5 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
+import ventaImg from "../../assets/img/Ventas.png"
+import kpiImg from "../../assets/img/KP-Detalle.png"
+import portafolioImg from "../../assets/img/Portafolio.png"
+import referenciaImg from "../../assets/img/Referencias.png"
+import ExepcionesImg from "../../assets/img/Excepciones.png"
 
 const Project = () => {
     const projects = [
@@ -8,35 +13,35 @@ const Project = () => {
             description: "Sistema para registrar y validar ventas, con frontend en HTML y Bootstrap. Incluye módulos de reportes, gestión de usuarios, roles, permisos, encriptación de contraseñas y administración de catálogos.",
             technologies: ["HTML", "PHP", "AJAX", "JavaScript", "MySQL"],
             link: "https://github.com/DaniloAcevedo2000/Proyectos-Web.git",
-            image: "/Ventas.png"
+            image: ventaImg
         },
         {
             title: "Excepciones de Ventas",
-            description: "Sistema desarrollado en .NET C#, gestiona el control de excepciones en las ventas mediante la entrada de datos relevantes y la generación de archivos PDF. Permite el seguimiento de excepciones por usuario, asegurando la gestión adecuada de la información a través de roles y permisos. Además, incluye módulos para la generación de reportes, la administración de usuarios y la gestión de catálogos.",
+            description: "Sistema desarrollado en .NET C#, gestiona el control de excepciones en las ventas mediante la entrada de datos relevantes y la generación de archivos PDF. Permite el seguimiento de excepciones por usuario, asegurando la gestións de la información a través de roles y permisos.",
             technologies: [".NET", "SQL Server"],
             link: "#",
-            image: "/Excepciones.png"
+            image: ExepcionesImg
         },
         {
             title: "KPI HelpDesk",
-            description: "Proyecto que visualiza de manera clara y efectiva la productividad de los usuarios que gestionan tickets, además de mostrar los canales con mayores reincidencias en la resolución. También permite el seguimiento detallado de los tickets a lo largo de sus diferentes estados, ofreciendo un control preciso del proceso.",
+            description: "Proyecto que visualiza de manera clara y efectiva la productividad de los usuarios que gestionan tickets, además de mostrar los canales con mayores reincidencias en la resolución. También permite el seguimiento detallado de los tickets a lo largo de sus diferentes estados.",
             technologies: ["Power BI", "SQL Server"],
             link: "https://github.com/DaniloAcevedo2000/Power-BI.git",
-            image: "/KP-Detalle.png"
+            image: kpiImg
         },
         {
             title: "Sistema Referencias",
-            description: "Sistema web para gestionar referencias de clientes, que incluye el registro de depósitos, rentas anticipadas y facturas. Realiza validaciones de clientes contra otros sistemas de ventas y cuenta con un módulo de control de excepciones. También integra 'Validaciones Syrem' para registrar ventas y evaluar el comportamiento del cliente, gestionando información sobre zonas sin recibo básico.",
+            description: "Sistema web para gestionar referencias de clientes, que incluye el registro de depósitos, rentas anticipadas y facturas. Realiza validaciones de clientes contra otros sistemas de ventas y cuenta con un módulo de control de excepciones.",
             technologies: ["PHP", "JavaScript", "SQL Server"],
             link: "#",
-            image: "/Referencias.png"
+            image: referenciaImg
         },
         {
             title: "Portafolio",
-            description: "Este portafolio, desarrollado en React con Tailwind, presenta mis proyectos, habilidades y conocimientos en desarrollo web. A través de una interfaz moderna y responsiva, los visitantes pueden explorar mis trabajos anteriores y comprender mejor mi experiencia en el campo.",
+            description: "Este portafolio, desarrollado en React con Tailwind, presenta mis proyectos, habilidades y conocimientos en desarrollo web. A través de una interfaz moderna y responsiva, los visitantes pueden explorar mis trabajos anteriores y comprender mejor mi experiencia.",
             technologies: ["React", "Tailwind"],
             link: "https://github.com/DaniloAcevedo2000/portafolio.git",
-            image: "/Portafolio.png"
+            image: portafolioImg
         }
     ];
 
