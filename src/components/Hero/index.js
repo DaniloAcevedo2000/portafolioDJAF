@@ -9,8 +9,8 @@ const Hero = () => {
 
     const downloadCV = () => {
         const link = document.createElement('a');
-        link.href = '/cv/CV - Danilo Jose Acevedo Flores.pdf';
-        link.setAttribute('download', 'CV - Danilo Jose Acevedo Flores.pdf');
+        link.href = '/CV_Danilo.pdf';
+        link.setAttribute('download', 'CV_Danilo.pdf');
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

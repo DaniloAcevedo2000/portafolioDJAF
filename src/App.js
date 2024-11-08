@@ -79,10 +79,10 @@ function App() {
             {/* Iconos flotantes (solo visibles si el botón está expandido) */}
             {isExpanded && (
               <div className="floating-icons">
-                <a href="https://wa.me/tu-numero" target="_blank" rel="noopener noreferrer" className="floating-icon whatsapp">
+                <a href="https://wa.me/+50585184853" target="_blank" rel="noopener noreferrer" className="floating-icon whatsapp">
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </a>
-                <a href="mailto:tu-correo@gmail.com" target="_blank" rel="noopener noreferrer" className="floating-icon gmail">
+                <a href="mailto:daniloacevedo2000@gmail.com" target="_blank" rel="noopener noreferrer" className="floating-icon gmail">
                   <FontAwesomeIcon icon={faGoogle} />
                 </a>
               </div>

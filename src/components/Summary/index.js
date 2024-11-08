@@ -11,16 +11,16 @@ const Summary = () => {
             Resumen
           </h1>
           <p className='pb-5 text-justify'>
-            Desarrollador de Software y Administrador de Bases de Datos con amplia experiencia en el diseño, desarrollo y mantenimiento de sistemas utilizando tecnologías como PHP y C#. Mis habilidades abarcan tanto el desarrollo frontend como backend, lo que me permite crear soluciones completas que optimizan procesos y mejoran la experiencia del usuario.
+            Desarrollador de Software y Administrador de Bases de Datos con experiencia en el diseño, desarrollo y mantenimiento de sistemas utilizando tecnologías como PHP y C#. Trabajo tanto en frontend como backend, lo que me permite crear soluciones completas
           </p>
           <p className='pb-5 text-justify'>
-            Tengo un dominio sólido de bases de datos, con experiencia en la gestión y administración de SQL Server, MySQL y Oracle. Mi experiencia incluye el uso de Linked Server para la integración de datos entre diferentes servidores, así como la implementación de procesos ETL (Extracción, Transformación y Carga) para la migración y consolidación de datos.
+            Manejo bases de datos como SQL Server, MySQL y Oracle, y he trabajado en la integración de datos con Linked Server y en procesos ETL (Extracción, Transformación y Carga) para la migración y consolidación de datos.
           </p>
           <p className='pb-5 text-justify'>
-            Soy experto en Transact-SQL, habiendo desarrollado y optimizado consultas complejas para mejorar el rendimiento de las aplicaciones. Además, he trabajado en la automatización de tareas mediante la creación de jobs programados, lo que garantiza la eficiencia en la ejecución de tareas críticas como respaldos, mantenimiento de bases de datos y actualizaciones periódicas.
+            Uso Transact-SQL para desarrollar y optimizar consultas para mejoran el rendimiento de las aplicaciones. También he implementado jobs programados para la automatización de tareas importantes como respaldos y mantenimiento de bases de datos.
           </p>
           <p className='pb-5 text-justify'>
-            También tengo experiencia en la creación de dashboards interactivos e informes en Power BI, lo que permite a las organizaciones visualizar información clave y tomar decisiones informadas basadas en análisis de datos en tiempo real. Siempre estoy buscando nuevos desafíos y oportunidades para integrar tecnologías innovadoras y generar un impacto positivo en cada proyecto.
+            Tengo experiencia en la creación de dashboards e informes interactivos en Power BI, facilitando a las organizaciones visualizar datos clave y tomar decisiones informadas basadas en análisis en tiempo real.
           </p>
         </div>
 
