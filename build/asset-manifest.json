@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portafolioDJAF/static/css/main.6953b3b9.css",
-    "main.js": "/portafolioDJAF/static/js/main.70f010d4.js",
+    "main.css": "/portafolioDJAF/static/css/main.e26221db.css",
+    "main.js": "/portafolioDJAF/static/js/main.3894bc28.js",
     "static/media/Portafolio.png": "/portafolioDJAF/static/media/Portafolio.32ab5be502ede85a4afd.png",
     "static/media/About-me.webp": "/portafolioDJAF/static/media/About-me.ac63bb9de92d02ca8fda.webp",
     "static/media/KP-Detalle.png": "/portafolioDJAF/static/media/KP-Detalle.5f1d00f7432f96e8b584.png",
@@ -23,11 +23,11 @@
     "static/media/slick.ttf": "/portafolioDJAF/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/portafolioDJAF/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/portafolioDJAF/index.html",
-    "main.6953b3b9.css.map": "/portafolioDJAF/static/css/main.6953b3b9.css.map",
-    "main.70f010d4.js.map": "/portafolioDJAF/static/js/main.70f010d4.js.map"
+    "main.e26221db.css.map": "/portafolioDJAF/static/css/main.e26221db.css.map",
+    "main.3894bc28.js.map": "/portafolioDJAF/static/js/main.3894bc28.js.map"
   },
   "entrypoints": [
-    "static/css/main.6953b3b9.css",
-    "static/js/main.70f010d4.js"
+    "static/css/main.e26221db.css",
+    "static/js/main.3894bc28.js"
   ]
 }
