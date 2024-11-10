@@ -105,12 +105,12 @@ const Project = () => {
                                             <strong>Tecnologías usadas: </strong>
                                             {project.technologies.join(", ")}
                                         </p>
-                                        <a
+                                        {/* <a
                                             href={project.link}
                                             className='inline-block bg-accent text-white px-4 py-2 rounded hover:bg-secondary transition duration-300'
                                         >
                                             Ver proyecto
-                                        </a>
+                                        </a> */}
                                     </div>
                                 </div>
                             </div>
