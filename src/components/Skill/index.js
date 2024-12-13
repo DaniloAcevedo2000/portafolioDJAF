@@ -2,8 +2,6 @@ import React from 'react';
 import cSharpIcon from '../../assets/img/c.png';
 import vbIcon from '../../assets/img/vb.png';
 import php from '../../assets/img/php1.png';
-import html from '../../assets/img/html.png';
-import css from '../../assets/img/css.png';
 import js from '../../assets/img/js.webp';
 import react from '../../assets/img/recat.png';
 import py from '../../assets/img/python1.png';
@@ -22,8 +20,6 @@ const Skill = () => {
             { name: 'C#', icon: cSharpIcon },
             { name: 'Visual Basic', icon: vbIcon },
             { name: 'PHP', icon: php },
-            { name: 'HTML', icon: html },
-            { name: 'CSS', icon: css },
             { name: 'JavaScript', icon: js },
             { name: 'React', icon: react },
         ],

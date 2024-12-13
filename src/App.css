@@ -30,6 +30,7 @@ nav li a {
     padding: 1.25rem 1rem;
     font-size: 1.125rem;
     color: white;
+    font-weight: bold;
 }
 
 nav li a:hover {
@@ -38,7 +39,7 @@ nav li a:hover {
 
 /* Navegación móvil */
 .mobile-nav {
-    display: block;
+    display: none;
     position: fixed;
     top: 4rem;
     left: -100%;
@@ -47,10 +48,12 @@ nav li a:hover {
     height: 100%;
     background-color: #1a202c;
     transition: left 0.5s;
+    z-index: 1000;
 }
 
 .mobile-nav.show {
     left: 0;
+    display: block;
 }
 
 /* Efectos de proyecto */
@@ -212,8 +215,8 @@ nav li a:hover {
 }
 
 .floating-button {
-  background-color: #28a745;
-  color: white;
+  background-color: #1a202c;
+  color: white; 
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -257,7 +260,7 @@ nav li a:hover {
 
 /* Colores específicos para cada ícono */
 .floating-icon.whatsapp {
-  color: #25D366;
+  color: #1a202c;
 }
 
 .floating-icon.gmail {
@@ -269,7 +272,7 @@ nav li a:hover {
   position: fixed;
   bottom: 53px;
   right: 8px;
-  background-color: #28a745;
+  background-color: #1a202c;
   color: white;
   border: none;
   border-radius: 50%;
@@ -284,3 +287,58 @@ nav li a:hover {
 .scroll-to-top:hover {
   transform: scale(1.1);
 }
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Resaltar lo que haces */
+.highlight {
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/* Marquee animation */
+.animate-marquee {
+    animation: marquee 14s linear infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+.text-highlight {
+    font-weight: bold;  
+    color: #fff;  
+    padding: 0.4rem 0.8rem;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);  
+    font-size: 1.1rem; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.header button {
+    background: transparent; 
+    border: none;  
+  }

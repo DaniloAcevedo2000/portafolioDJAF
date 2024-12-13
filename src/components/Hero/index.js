@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faDownload } from '@fortawesome/free-solid-svg-icons';
 import HeroImg from '../../assets/img/coding.webp';
-import { ReactTyped as Typed } from 'react-typed';
-
-
 
 const Hero = () => {
+
+    const phrases = useMemo(() => [
+        'Hola, Soy Danilo Acevedo',
+        'Analista de Datos y Desarrollador Web'
+    ], []);
+
+    const [visiblePhrases, setVisiblePhrases] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        if (currentIndex < phrases.length) {
+            const timeout = setTimeout(() => {
+                setVisiblePhrases((prev) => [...prev, phrases[currentIndex]]);
+                setCurrentIndex((prev) => prev + 1);
+            }, 1000);
+            return () => clearTimeout(timeout);
+        }
+    }, [currentIndex, phrases]);
+
     const downloadCV = () => {
         const link = document.createElement('a');
         link.href = '/CV_Danilo.pdf';
@@ -14,7 +30,7 @@ const Hero = () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-    }
+    };
 
     const scrollToProjects = () => {
         const projectSection = document.getElementById('project');
@@ -27,18 +43,19 @@ const Hero = () => {
         <section className='bg-primary text-white min-h-screen w-full flex items-center justify-center'>
             <div className='container mx-auto grid md:grid-cols-2 items-center md:justify-between'>
                 <div className='hero-info'>
-                    <h1 className='text-2xl lg:text-6xl leading-loose'>
-                        <Typed
-                            strings={['Hola, Soy Danilo Acevedo - Ingeniero en Computación']}
-                            typeSpeed={50}
-                            backSpeed={50}
-                            loop={false}
-                        />
-                    </h1>
+                    <div className='text-2xl md:text-5xl leading-loose'>
+                        {visiblePhrases.map((phrase, index) => (
+                            <h6 key={index} className='fade-in'>
+                                <span className={index === 1 ? 'highlight' : ''}>
+                                    {phrase}
+                                </span>
+                            </h6>
+                        ))}
+                    </div>
 
-                    <div className="overflow-hidden whitespace-nowrap">
-                        <p className="py-5 animate-marquee">
-                            Soy un apasionado por la tecnología y la programación. Me gusta aprender y mejorar.
+                    <div className="overflow-hidden">
+                        <p className="py-5 animate-marquee text-highlight">
+                            Combinando Análisis, Desarrollo y Creatividad para construir soluciones.
                         </p>
                     </div>
 
@@ -66,6 +83,6 @@ const Hero = () => {
             </div>
         </section>
     );
-}
+};
 
 export default Hero;

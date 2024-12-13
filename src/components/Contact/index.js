@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Iconos de marcas
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'; // Icono del avión de papel
+import { faPaperPlane, faSpinner } from '@fortawesome/free-solid-svg-icons'; 
 import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
 
@@ -11,6 +10,7 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,6 +21,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
     const emailParams = {
       from_name: formData.name,
@@ -28,27 +29,33 @@ const Contact = () => {
       message: formData.message,
     };
 
-    emailjs.send('portafolio_djaf2000', 'template_5gehero', emailParams, 'U120iQ9D0jruhIERq')
-      .then((response) => {
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Mensaje enviado correctamente.",
-          showConfirmButton: false,
-          timer: 1500
-        });
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-      }, (error) => {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Hubo un error al enviar el mensaje, por favor intenta de nuevo más tarde.',
-        });
-      });
+    emailjs
+      .send('portafolio_djaf2000', 'template_5gehero', emailParams, 'U120iQ9D0jruhIERq')
+      .then(
+        (response) => {
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Mensaje enviado correctamente.',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          });
+          setIsSending(false); 
+        },
+        (error) => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Hubo un error al enviar el mensaje, por favor intenta de nuevo más tarde.',
+          });
+          setIsSending(false); 
+        }
+      );
   };
 
   return (
@@ -58,25 +65,9 @@ const Contact = () => {
         <div className='about-info'>
           <h1 className='text-2xl lg:text-6xl leading-loose font-bold'>Contáctame</h1>
           <p className='text-lg mt-4'>
-            Si tienes alguna pregunta o deseas contactarme, por favor llena el formulario o conéctate a través de mis redes sociales.
+            Si tienes alguna pregunta o deseas contactarme, por favor llena el formulario o conéctate a través de mis
+            redes sociales.
           </p>
-          {/* Redes sociales */}
-          <div className='flex justify-center mt-8 space-x-4'>
-            <a
-              href='https://wa.me/+50585184853'
-              className='text-white hover:text-opacity-80 transition duration-200'
-              target='_blank' rel='noopener noreferrer'
-            >
-              <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-            </a>
-            <a
-              href='https://www.linkedin.com/in/danilo-acevedo-645372241'
-              className='text-white hover:text-opacity-80 transition duration-200'
-              target='_blank' rel='noopener noreferrer'
-            >
-              <FontAwesomeIcon icon={faLinkedin} size="2x" />
-            </a>
-          </div>
         </div>
 
         {/* Formulario de contacto */}
@@ -120,9 +111,19 @@ const Contact = () => {
             <button
               type='submit'
               className='flex items-center justify-center bg-secondary text-white px-4 py-3 rounded hover:bg-opacity-80 transition duration-200 w-full'
+              disabled={isSending} // Deshabilita el botón mientras se envía
             >
-              <span className='mr-2'>Enviar</span>
-              <FontAwesomeIcon icon={faPaperPlane} />
+              {isSending ? (
+                <>
+                  <FontAwesomeIcon icon={faSpinner} spin className='mr-2' />
+                  Enviando Correo...
+                </>
+              ) : (
+                <>
+                  <span className='mr-2'>Enviar</span>
+                  <FontAwesomeIcon icon={faPaperPlane} />
+                </>
+              )}
             </button>
           </form>
         </div>
