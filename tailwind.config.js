@@ -5,6 +5,13 @@ module.exports = {
   theme: {
     extend: {},
   },
+  safelist: [
+    'opacity-100',
+    'opacity-0',
+    '-translate-y-10',
+    'translate-y-0',
+  ],
   plugins: [],
 };
+
 
