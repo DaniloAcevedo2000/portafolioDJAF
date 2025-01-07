@@ -5,9 +5,9 @@ import AboutImg from '../../assets/img/about.webp';
 const About = () => {
   return (
     <section className='bg-secondary text-white min-h-screen w-full flex items-center justify-center'>
-      <div className='container mx-auto grid md:grid-cols-2 items-center md:gap-8'>
+      <div className='container mx-auto grid md:grid-cols-2 items-center md:gap-8 px-4 sm:px-6 lg:px-8'>
         <motion.div
-          className='about-info'
+          className='about-info space-y-6'
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -17,7 +17,7 @@ const About = () => {
           </h1>
 
           <motion.p
-            className='pb-4 text-justify'
+            className='text-justify'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -26,7 +26,7 @@ const About = () => {
           </motion.p>
 
           <motion.p
-            className='pb-4 text-justify'
+            className='text-justify'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -35,7 +35,7 @@ const About = () => {
           </motion.p>
 
           <motion.p
-            className='pb-4 text-justify'
+            className='text-justify'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -44,7 +44,7 @@ const About = () => {
           </motion.p>
 
           <motion.p
-            className='pb-4 text-justify'
+            className='text-justify'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -54,7 +54,7 @@ const About = () => {
         </motion.div>
 
         <motion.div
-          className='about-img relative'
+          className='about-img relative mt-8 md:mt-0'
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -79,3 +79,4 @@ const About = () => {
 };
 
 export default About;
+

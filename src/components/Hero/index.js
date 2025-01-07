@@ -50,7 +50,7 @@ const Hero = () => {
 
             {/* Contenido */}
             <div className="container relative z-10 mx-auto grid md:grid-cols-2 items-center">
-                <div className="hero-info text-white">
+                <div className="hero-info text-white px-4 md:px-6">
                     {/* Animación de frases */}
                     <div className="text-2xl md:text-5xl font-bold leading-loose">
                         {visiblePhrases.map((phrase, index) => (
@@ -71,11 +71,11 @@ const Hero = () => {
                     </div>
 
                     {/* Botones */}
-                    <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full max-w-md">
                         <button
                             onClick={scrollToProjects}
                             aria-label="Ver proyectos"
-                            className="btn bg-gradient-to-r from-purple-500 to-indigo-500 border-2 border-indigo-500 text-white px-6 py-3 hover:from-transparent hover:to-transparent hover:border-white flex items-center justify-center w-full sm:w-auto transition-all duration-300 focus:ring focus:outline-none"
+                            className="w-full md:w-1/2 btn bg-gradient-to-r from-purple-500 to-indigo-500 border-2 border-indigo-500 text-white px-6 py-3 hover:from-transparent hover:to-transparent hover:border-white flex items-center justify-center transition-all duration-300 focus:ring focus:outline-none"
                         >
                             <FontAwesomeIcon icon={faEye} className="mr-2" />
                             Ver Proyectos
@@ -84,7 +84,7 @@ const Hero = () => {
                         <button
                             onClick={downloadCV}
                             aria-label="Descargar CV"
-                            className="btn bg-gradient-to-r from-green-500 to-teal-500 border-2 border-teal-500 text-white px-6 py-3 hover:from-transparent hover:to-transparent hover:border-white flex items-center justify-center w-full sm:w-auto transition-all duration-300 focus:ring focus:outline-none"
+                            className="w-full md:w-1/2 btn bg-gradient-to-r from-green-500 to-teal-500 border-2 border-teal-500 text-white px-6 py-3 hover:from-transparent hover:to-transparent hover:border-white flex items-center justify-center transition-all duration-300 focus:ring focus:outline-none"
                         >
                             <FontAwesomeIcon icon={faDownload} className="mr-2" />
                             Descargar CV
@@ -97,3 +97,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
