@@ -9,7 +9,13 @@
 
 body{
     overflow-x: hidden;
+    width: 100%;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Colores */
 .bg-primary {
     background-color: #0f172a;
@@ -66,6 +72,7 @@ nav li a:hover {
     overflow: hidden;
     padding: 20px;
     height: 400px;
+    width: 100%;
 }
 
 .project-card:hover {
@@ -93,6 +100,7 @@ nav li a:hover {
 
 /* Botón para regresar al inicio */
 .scroll-to-top {
+    width: 100%;
     position: fixed;
     bottom: 5%;
     right: 5%;
@@ -108,12 +116,14 @@ nav li a:hover {
 }
 
 .scroll-to-top:hover {
+    width: 100%;
     background-color: #5b5de6;
     transform: scale(1.1);
 }
 
 /* TAMAÑO Y DISEÑO DE LAS TARJETAS */
 .project-slider .slick-slide {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -123,6 +133,7 @@ nav li a:hover {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
 }
 
 /* Responsividad */
@@ -134,6 +145,7 @@ nav li a:hover {
 }
 
 .project-card .card-content {
+    width: 100%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -244,40 +256,6 @@ nav li a:hover {
   transform: scale(1.1);
 }
 
-/* Iconos flotantes visibles cuando se expande */
-.floating-icons {
-  margin-bottom: 5px; /* Aumenta el espacio entre los iconos y el botón */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.floating-icon {
-  background-color: #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px; /* Aumenta el espacio entre los iconos */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.floating-icon:hover {
-  transform: scale(1.1);
-}
-
-/* Colores específicos para cada ícono */
-.floating-icon.whatsapp {
-  color: #1a202c;
-}
-
-.floating-icon.gmail {
-  color: #DB4437;
-}
-
 /* Botón de scroll-to-top */
 .scroll-to-top {
   position: fixed;
@@ -334,7 +312,7 @@ nav li a:hover {
     overflow: hidden; 
     width: 100%; 
     position: relative; 
-} */
+}  */
 
 .text-highlight {
     font-weight: bold;  
@@ -384,11 +362,6 @@ nav li a:hover {
     }
   }
   
-  .animate-marquee {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: marquee 10s linear infinite;
-  }
+
   
 

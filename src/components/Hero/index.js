@@ -65,7 +65,7 @@ const Hero = () => {
 
                     {/* Descripción animate-marquee*/}
                     <div className="marquee-container py-5">
-                        <p className="text-highlight text-sm md:text-base ">
+                        <p className="text-highlight text-sm md:text-base">
                             Combinando Análisis, Desarrollo y Creatividad para construir soluciones.
                         </p>
                     </div>
