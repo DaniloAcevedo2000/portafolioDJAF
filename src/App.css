@@ -323,12 +323,18 @@ nav li a:hover {
 }
 
 /* Marquee animation */
-.animate-marquee {
+/* .animate-marquee {
+    display: inline-block;
     animation: marquee 14s linear infinite;
     white-space: nowrap;
     overflow: hidden;
-    width: 100%;
 }
+
+.marquee-container {
+    overflow: hidden; 
+    width: 100%; 
+    position: relative; 
+} */
 
 .text-highlight {
     font-weight: bold;  
