@@ -6,6 +6,8 @@ import kpiImg from "../../assets/img/KP-Detalle.png";
 import portafolioImg from "../../assets/img/Portafolio.png";
 import referenciaImg from "../../assets/img/Referencias.png";
 import ExepcionesImg from "../../assets/img/Excepciones.png";
+import API from "../../assets/img/API.png"
+
 
 const Project = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -45,7 +47,14 @@ const Project = () => {
             technologies: ["React", "Tailwind"],
             link: "https://github.com/DaniloAcevedo2000/portafolio.git",
             image: portafolioImg,
-        }
+        },
+        {
+            title: "Organización API",
+            description: "API RESTful para la gestión de organizaciones con control basado en roles y permisos. Incluye autenticación y autorización segura con JWT, soporte para refresh tokens, y bloqueo automático tras múltiples intentos fallidos.",
+            technologies: [".NET", "C#", "SQL Server", "JWT", "Entity Framework Core", "REST"],
+            link: "https://github.com/DaniloAcevedo2000/portafolio.git",
+            image: API,
+        }        
     ];
 
     const settings = {
